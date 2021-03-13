@@ -1,0 +1,9 @@
+.container {
+    composes: baseContainer from global;
+
+    margin: var(--side-padding) auto !important;
+    padding: var(--side-padding) !important;
+    background-color: var(--clr-background--r);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}

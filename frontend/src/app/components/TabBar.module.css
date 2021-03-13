@@ -1,0 +1,88 @@
+.base {
+    width: 100%;
+    height: 64px;
+    background-color: var(--clr-background--r);
+    box-shadow: 0px 2px 12px rgb(36 30 63 / 10%);
+
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+}
+.grid {
+    composes: grid12Col from global;
+    height: 100%;
+    align-items: center;
+}
+
+.nameContainer {
+    grid-column: 1 / 3;
+}
+.appName {
+    composes: tstH3 from global;
+    color: var(--clr-dark--r);
+}
+
+
+.btnContainer {
+    grid-column: 3 / 6;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.searchBarContainer {
+    composes: hFlex from global;
+    grid-column: 9 / 13;
+}
+.oSearch {
+    width: 100%;
+    height: 40px;
+    background-color: var(--clr-background--t);
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+}
+.oSearchInput {
+    composes: tstB1 from global;
+    flex: 1;
+
+    padding: 0 16px;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    color: var(--clr-dark--r);
+}
+.oSearchInput:focus {
+    outline: none;
+    border: none;
+}
+.oSearchInput::placeholder {
+    color: var(--clr-dark--t);
+}
+
+
+@media screen and (min-width: 450px) and (max-width: 780px) {
+
+    .nameContainer {
+        grid-column: 1 / 3;
+    }
+    .btnContainer {
+        grid-column: 3 / 7;
+    }
+    .searchBarContainer {
+        grid-column: 8 / 13;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .nameContainer {
+        display: none;
+    }
+    .btnContainer {
+        grid-column: 1 / 7;
+    }
+    .searchBarContainer {
+        grid-column: 7 / 13;
+    }
+}

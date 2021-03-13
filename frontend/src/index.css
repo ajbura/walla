@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    /* --- colors. clr-[type]--[style]. style=[b==bold | r==regular | l==light } t==thin] --- */
+    --clr-background--r: #ffffff;
+    --clr-background--l: #f4f4f4;
+    --clr-background--t: #f0f0f0;
+
+    --clr-primary--b: #1133DD;
+    --clr-primary--r: #2546EE;
+    --clr-primary--l: #637AEC;
+    --clr-primary--t: rgba(207, 214, 251, 0.5);
+    
+    --clr-secondary--b: #14B157;
+    --clr-secondary--r: #17CC64;
+    --clr-secondary--l: #53D98C;
+    --clr-secondary--t: rgba(199, 243, 218, 0.5);
+    
+    --clr-caution--b: #EF8323;
+    --clr-caution--r: #F2994A;
+    --clr-caution--l: #F5B479;
+    --clr-caution--t: rgba(252, 231, 212, 0.5);
+    
+    --clr-danger--b: #E63131;
+    --clr-danger--r: #EB5757;
+    --clr-danger--l: #F08383;
+    --clr-danger--t: rgba(250, 215, 215, 0.5);
+
+    --clr-dark--r: rgba(0, 0, 0, 87%);
+    --clr-dark--l: rgba(0, 0, 0, 60%);
+    --clr-dark--t: rgba(0, 0, 0, 10%);
+
+    --clr-light--r: rgba(255, 255, 255, 96%);
+    --clr-light--l: rgba(255, 255, 255, 84%);
+    --clr-light--t: rgba(255, 255, 255, 38%);
+
+    /* --- vars --- */
+    --grid-size: 1032px;
+    --side-padding: 16px;
+}
+
+@media screen and (max-width: 550px) {
+    :root {
+        --side-padding: 8px;
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--clr-background--l);
+    color: var(--clr-dark--l);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+/* --- Reset default --- */
+h1, h2, h3, h4, h5, h6, p, span, textarea, label {
+    margin: 0;
+    padding: 0;
+}
+input {
+    min-width: 1px;
+}
+a {
+    text-decoration: none;
+}

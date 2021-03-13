@@ -1,0 +1,8 @@
+.container {
+}
+
+.btnContainer {
+    composes: hFlex from global;
+    margin: 48px;
+    justify-content: center;
+}

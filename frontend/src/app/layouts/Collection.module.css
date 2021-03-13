@@ -1,0 +1,23 @@
+.card {
+    margin-bottom: 36px;
+    /* padding: 16px;
+    background-color: var(--clr-background--r);
+    border-radius: 8px;
+    border: 1px solid var(--clr-background--t); */
+}
+.header {
+    composes: hFlex from global;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.collName {
+    composes: tstS1 from global;
+    color: var(--clr-dark--r);
+    font-weight: 600 !important;
+}
+.collTotal {
+    composes: tstb2 from global;
+    padding-top: 4px;
+    color: var(--clr-dark--l);
+}

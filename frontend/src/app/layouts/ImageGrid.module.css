@@ -1,0 +1,112 @@
+.grid {
+    margin: 4px 0;
+    width: 100%;
+    display: grid;
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 180px);
+}
+
+.thumb {
+    background-color: var(--clr-primary--t);
+    border-radius: 4px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.tLeft, .tRight {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+.tRight {
+    grid-column: 3 / 5;
+}
+
+.userContainer {
+    composes: hFlex from global;
+    position: absolute;
+    top: 4px;
+    left: 0;
+
+    width: 100%;
+    height: 48px !important;
+    padding: 0 var(--side-padding);
+    /* background-color: #ffffff9f; */
+}
+
+.profileImage {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    border-radius: 16px;
+    background-color: var(--clr-background--t);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.username {
+    composes: tstB2 from global;
+    color: var(--clr-light--l);
+    text-shadow: 1px 1px 3px black;
+}
+
+
+@media screen and (min-width: 450px) and (max-width: 780px) {
+    
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 180px);
+    }
+
+    .tLeft {
+        grid-row: 1 / 2;
+    }
+    .tRight {
+        grid-column: 2 / 4;
+        grid-row:  2 / 3;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 180px);
+    }
+
+    .tRight, .tLeft {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+    .tRight {
+        grid-row:  3 / 4;
+    }
+}
+
+/* --- View Image --- */
+
+.image__header {
+    composes: hFlex from global;
+    margin-bottom: 16px;
+    justify-content: space-between;
+}
+.image__infoContainer {
+    composes: hFlex from global;
+}
+
+.image__profileImage {
+    composes: profileImage
+}
+.image__username {
+    composes: username;
+    text-shadow: none;
+    color: var(--clr-dark--r);
+}
